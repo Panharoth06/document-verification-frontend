@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 
 type CertificateResponse = {
   owner_name: string;
@@ -52,8 +53,12 @@ export default function CertificatePage() {
 
       const cert: CertificateResponse = await res.json();
       setCertificate(cert);
-    } catch (err: any) {
-      setError(err.message ?? "Unexpected error");
+    } catch (err: unknown) {
+      if (err instanceof Error) {
+        setError(err.message);
+      } else {
+        setError("Unexpected error");
+      }
     } finally {
       setLoading(false);
     }
