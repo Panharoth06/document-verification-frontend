@@ -93,7 +93,7 @@ return (
     
     {/* ===== SUBTLE GRADIENT OVERLAY ===== */}
     {/* Adds very subtle depth to white background */}
-    <div className="absolute inset-0 bg-gradient-to-br from-white via-blue-50/30 to-white pointer-events-none"></div>
+    <div className="absolute inset-0 bg-linear-to-br from-white via-blue-50/30 to-white pointer-events-none"></div>
 
     {/* ===== BLACK BORDER OUTSIDE ===== */}
     {/* border-8: Thick border (32px)
@@ -138,7 +138,7 @@ return (
             Create Certificate
           </h2>
           {/* Decorative line under title */}
-          <div className="h-1 w-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
+          <div className="h-1 w-12 bg-linear-to-r from-blue-500 to-purple-500 rounded-full"></div>
           <p className="text-gray-700 text-xs mt-2 font-medium">
             Fill in the details below
           </p>
@@ -266,7 +266,7 @@ return (
             <div className="text-center mb-8">
               <div className="flex justify-center mb-4">
                 <div className="relative">
-                  <div className="absolute inset-0 bg-gradient-to-r from-green-400 to-blue-400 rounded-full blur-lg opacity-60"></div>
+                  <div className="absolute inset-0 bg-linear-to-r from-green-400 to-blue-400 rounded-full blur-lg opacity-60"></div>
                   <svg className="relative w-16 h-16 text-green-500 bg-white rounded-full p-2" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
@@ -286,7 +286,7 @@ return (
               {/* Owner Info */}
               <div className="pb-4 border-b border-gray-300/50">
                 <p className="text-gray-600 text-xs font-bold uppercase tracking-widest mb-2">Owner</p>
-                <p className="text-gray-900 text-lg font-bold break-words">
+                <p className="text-gray-900 text-lg font-bold wrap-break-word">
                   {certificate.owner_name}
                 </p>
               </div>
@@ -294,7 +294,7 @@ return (
               {/* Course Info */}
               <div className="pb-4 border-b border-gray-300/50">
                 <p className="text-gray-600 text-xs font-bold uppercase tracking-widest mb-2">Course</p>
-                <p className="text-gray-900 text-lg font-bold break-words">
+                <p className="text-gray-900 text-lg font-bold wrap-break-word">
                   {certificate.course_name}
                 </p>
               </div>
@@ -314,7 +314,7 @@ return (
               {/* Certificate Code */}
               <div>
                 <p className="text-gray-600 text-xs font-bold uppercase tracking-widest mb-2">Certificate Code</p>
-                <div className="bg-gradient-to-r from-blue-200/30 to-purple-200/30 backdrop-blur-sm border border-blue-300/50 rounded-lg p-3 flex items-center">
+                <div className="bg-linear-to-r from-blue-200/30 to-purple-200/30 backdrop-blur-sm border border-blue-300/50 rounded-lg p-3 flex items-center">
                   <p className="text-blue-700 font-mono text-sm font-bold break-all flex-1">
                     {certificate.code}
                   </p>
@@ -325,7 +325,7 @@ return (
             {/* Download Button */}
             <button
               onClick={downloadPdf}
-              className="w-full bg-gradient-to-r from-green-500 to-emerald-500 text-white font-bold py-3 px-4 rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center gap-2 group"
+              className="w-full bg-linear-to-r from-green-500 to-emerald-500 text-white font-bold py-3 px-4 rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center gap-2 group"
             >
               <svg className="w-5 h-5 group-hover:translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
