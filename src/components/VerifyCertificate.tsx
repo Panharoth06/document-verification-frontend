@@ -54,7 +54,7 @@ export default function VerifyCertificate() {
       );
 
       if (!res.ok) {
-        throw new Error("Failed to verify certificate");
+        throw new Error("The certificate is altered");
       }
 
       const data: VerifyResponse = await res.json();
